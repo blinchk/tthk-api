@@ -16,10 +16,6 @@ class FlaskTests(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 302)
 
-    def test_changes(self):
-        response = self.client.get('/changes')
-        self.assertEqual(response.status_code, 200)
-
     def test_whole_consultations(self):
         response = self.client.get('/consultations')
         self.assertEqual(response.status_code, 200)
